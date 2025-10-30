@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Mobile-first responsive styles for Future Predictor */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at top, #1a002b, #000);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    /* allow breathing room on small screens */
+}
+
+h1 {
+    font-size: clamp(1.6rem, 4vw, 2.5rem);
+    color: #ff00c3;
+    text-shadow: 0 0 20px #ff00c3;
+    margin: 0 0 12px 0;
+    text-align: center;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.08);
+    border: 2px solid #ff00c3;
+    border-radius: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 420px;
+    /* keeps it readable on large screens */
+    text-align: center;
+    box-shadow: 0 0 25px #ff00c3;
+    margin: 12px auto;
+}
+
+input,
+select,
+button {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+    font-size: 1rem;
+}
+
+button {
+    margin-top: 10px;
+    background: linear-gradient(90deg, #ff00c3, #ff4f00);
+    color: #fff;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+button:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 6px 18px rgba(255, 0, 195, 0.18);
+}
+
+.output {
+    margin-top: 16px;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #fff;
+}
+
+.loading {
+    font-family: monospace;
+    white-space: pre-line;
+    color: #0ff;
+    text-shadow: 0 0 10px #00fff2;
+    margin-top: 16px;
+    min-height: 90px;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0.3;
+    }
+}
+
+.dot {
+    animation: blink 1s infinite;
+}
+
+/* Larger screens adjustments */
+@media (min-width: 600px) {
+    .container {
+        padding: 24px 30px;
+    }
+
+    .loading {
+        min-height: 120px;
+    }
+}
+
+@media (min-width: 992px) {
+    body {
+        padding: 40px;
+    }
+
+    .container {
+        max-width: 500px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+
+footer {
+    margin-top: 30px;
+    text-align: center;
+    color: #ccc;
+    font-size: 0.9rem;
+    padding: 15px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+.dev-name {
+    color: #ff00c3;
+    font-weight: 600;
+    text-shadow: 0 0 10px #ff00c3;
+}
+
+.social-links {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    color: #ff00c3;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border: 1px solid #ff00c3;
+    padding: 6px 12px;
+    border-radius: 25px;
+    transition: 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 0 10px rgba(255, 0, 195, 0.4);
+}
+
+.social-links a i {
+    font-size: 1.3rem;
+}
+
+.social-links a:hover {
+    background: linear-gradient(90deg, #ff00c3, #ff4f00);
+    color: #fff;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ff00c3;
+}
+
+/* 🌍 Responsive footer */
+@media (max-width: 480px) {
+    footer {
+        font-size: 0.8rem;
+    }
+
+    .social-links a {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+
+    .social-links a i {
+        font-size: 1.1rem;
+    }
+}
