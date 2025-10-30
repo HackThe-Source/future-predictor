@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Time Machine v2.0 🔮</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>🔮 Future Predictor 🔮</h1>
+
+    <div class="container">
+        <input type="text" id="name" placeholder="Enter Your Name" />
+        <input type="date" id="dob" />
+        <select id="gender">
+            <option value="">Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+        <button onclick="predictFuture()">See My Future 🔮</button>
+
+        <div class="loading" id="loading"></div>
+        <div class="output" id="output"></div>
+    </div>
+
+    <footer>
+        <p>Developed by <span class="dev-name">HARSH</span></p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/harsshh__06" target="_blank" class="instagram-link">
+                <i class="fab fa-instagram"></i>Instagram</a>
+            <a href="https://github.com/HackThe-Source" target="_blank" class="github-link">
+                <i class="fab fa-github"></i>GitHub
+            </a>
+        </div>
+
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
